@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/libnoisebackgrounddeesignv2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <Button
+        android:id="@+id/btnStartR"
+        style="android:buttonStyle"
+        android:layout_width="150dp"
+        android:layout_height="175dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/record_button_style"
+        android:onClick="goButton"
+        android:text="@string/go"
+        android:textSize="50sp" />
+    
+    <Button
+        android:id="@+id/btnUserID"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_style"
+        android:onClick="signInButton"
+        android:text="@string/signin" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtHighscore"
+        android:layout_alignBottom="@+id/txtHighscore"
+        android:layout_alignLeft="@+id/btnMenu"
+        android:text="@string/you_score"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txtCurrentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLocal"
+        android:layout_alignBottom="@+id/txtLocal"
+        android:layout_alignRight="@+id/btnMenu"
+        android:layout_marginRight="26dp"
+        android:text="@string/blank_score"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnUserID"
+        android:layout_alignBottom="@+id/btnUserID"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/button_style"
+        android:onClick="menuButton"
+        android:text="@string/menu" />
+
+    <TextView
+        android:id="@+id/txtHighscoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLocal"
+        android:layout_alignBottom="@+id/txtLocal"
+        android:layout_alignRight="@+id/txtHighscore"
+        android:text="@string/blank_score"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txtHighscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtHighscoreValue"
+        android:layout_alignRight="@+id/btnUserID"
+        android:layout_marginBottom="17dp"
+        android:text="@string/highscores"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txtLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnStartR"
+        android:layout_marginBottom="32dp"
+        android:layout_toLeftOf="@+id/txtHighscoreValue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
